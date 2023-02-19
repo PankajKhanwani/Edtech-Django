@@ -1,0 +1,54 @@
+1. Any logical entity that doesn't exist in real world is knows as class. Class is encapsulation of methods and variables into a single unit. We can define calss by using class keyword followed by space and class name
+	class Employee:
+
+2. Any real world entity is knows as object. Object is generally a physical existence. Object can be accessed by using their reference variable. Every object is an instance of the class which means objects of the same class has same properties or characteristics.
+   
+
+3. Constructors are generally used for initialising an object. The goal of the constructor is to assign some values the data variables of the class which is required when an object of that class is created. In python we can create constructor by using _init__().
+
+4. Constructor is used to initialize the values into the object whereas methods are generally used to do functionality of an object.
+   Constructor is automatically called at the time of object creation whereas methods are called when users call them manually.
+   Constructor doesn't return any value whereas a method can return a value.
+   Constructor's name must be __init__ whereas method's name can be anything except predefined names.
+   
+5. Instance variable are those variables which will be present inside every object. Every object can have different values which means every object has a copy of it whereas static variables are those variables which will be same for every object.
+   Instance variable can be modify by reference variable of an object whereas static variable can be modify by calling with the class name.
+   We can get data from instance variable with only reference variable of that object whereas we can get data of static variable by class name or reference variable(if it doesn't have variable with the same name).
+   Instance variable is created after object is created whereas static variable is created at the time of class loading.
+   There can be static variable without any object but there can not be any instance variable without any object.
+
+6. Instance Method:- If a method requires use of any instance variable then it is recommended to create that method as instance method.
+		     Instance method are those methods which can only be called by reference variable of an object and the action will be performed basis on that reference variable
+  		     The first argument of instance method is passed automatically by python and that argument will point to the current object.
+		     Do not require any decorator.
+
+   Static Method:-  If a method do not require use of any instance or static variable then it is recommended to create that method as static method
+		    Static method are those methods which can be called by object reference(if static method decorator is used) or class reference.
+		    It may or may not include any argument.
+            	    We can define static method by using @staticmethod decorator, but it is not compulsory because if an instance method is called by class reference then python will treat that method as static method.
+
+   Class Method:- If a method requires use of any staic variable and no instance variable, then it is recommended to create that method as class method.
+		  Class method can be called by object reference or class referenece.
+		  The first argument of class method is passed automatically by python and that will point to currect class name.
+		  It is compulsory to use @classmethod decorator to define class method.
+
+7. A class inside class is known as inner class or nested class. A class can have 1 or more than 1 inner class. Inner class is generally used when we need to hide the code from the outside world.
+   Inner class is generally used when the classes are closely related which means that nested class can only be used when the outer class objects is created and there is no use of inner class without its outer class.
+   Inner class helps in organise the code in a easier way as it improves readability that what classes are closely related or not.
+
+8. Python automatically deletes objects which are no longer use or we can say that python deletes objects automatically when there is no reference variable left of that object. 
+   It is done to free up the memory because if the object as no reference variable then we can't access that and if we can't access them then there is no use of keeping that object inside the memory.
+   The process by which python frees up the memory that no longer in use is called garbage collection.
+   This process is done by garbage collector and we can manually eligible any object for garbage collector to delete is by deleting its reference variable.
+
+9. Destructor is a method which is called automatically by python at the time of deleting or destroying the object.
+   Main purpose of destructor is used to define clean up code like closing the connection to database or file before deleting the object.
+   It will be executed when the object has no reference variable and that object is eligible for garbage collector to delete it or we can say it will be executed just before deleting the object.
+   We can define the destructor by using __del__.
+   Destructor takes only 1 argument which is automatically passed by python and that argument points to the current object.
+
+   
+		
+   
+   
+   
